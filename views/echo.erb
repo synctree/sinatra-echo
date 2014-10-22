@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Echo</title>
+  </head>
+  <body>
+    <ul>
+      <li><strong>Request</strong>:
+        <ul>
+        <% request.env.select { |k,_| k =~ /^(?!HTTP_)[A-Z]/ }.each do |k,v| %>
+          <li><%= k %>: <%= v %></li>
+        <% end %>
+        </ul>
+      </li>
+      <li><strong>Headers</strong>:
+        <ul>
+        <% request.env.select { |k,_| k =~ /^HTTP_/ }.each do |k,v| %>
+          <li><%= k %>: <%= v %></li>
+        <% end %>
+        </ul>
+      </li>
+      <li><strong>Parameters</strong>:
+        <ul>
+        <% request.params.each do |k,v| %>
+          <li><%= k %>: <%= v %></li>
+        <% end %>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
+
