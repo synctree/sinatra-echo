@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/md5/rack-conneg.git
-  revision: 5346307b7983bd7df40c0aa9f390a9426f679ee1
+  revision: a337a4fa22240ef0529a6f459d53f3354feaeba9
   branch: nil-fallback
   specs:
     rack-conneg (0.2.0)
