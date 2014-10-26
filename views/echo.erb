@@ -5,27 +5,15 @@
   </head>
   <body>
     <ul>
-      <li><strong>Request</strong>:
+      <% data.each do |group,map| %>
+      <li><strong><%= group.capitalize %></strong>:
         <ul>
-        <% request.env.select { |k,_| k =~ /^(?!HTTP_)[A-Z]/ }.each do |k,v| %>
+        <% map.each do |k,v| %>
           <li><%= k %>: <%= v %></li>
         <% end %>
         </ul>
       </li>
-      <li><strong>Headers</strong>:
-        <ul>
-        <% request.env.select { |k,_| k =~ /^HTTP_/ }.each do |k,v| %>
-          <li><%= k %>: <%= v %></li>
-        <% end %>
-        </ul>
-      </li>
-      <li><strong>Parameters</strong>:
-        <ul>
-        <% request.params.each do |k,v| %>
-          <li><%= k %>: <%= v %></li>
-        <% end %>
-        </ul>
-      </li>
+      <% end %>
     </ul>
   </body>
 </html>

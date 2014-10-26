@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/md5/rack-conneg.git
+  revision: 5346307b7983bd7df40c0aa9f390a9426f679ee1
+  branch: nil-fallback
+  specs:
+    rack-conneg (0.2.0)
+      rack (>= 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -16,4 +24,5 @@ PLATFORMS
 
 DEPENDENCIES
   erubis
+  rack-conneg!
   sinatra
