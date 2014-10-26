@@ -10,6 +10,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     erubis (2.7.0)
+    puma (2.9.0)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -24,5 +26,6 @@ PLATFORMS
 
 DEPENDENCIES
   erubis
+  puma
   rack-conneg!
   sinatra
