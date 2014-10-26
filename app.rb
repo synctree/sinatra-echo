@@ -49,7 +49,7 @@ def echo
     end
     wants.other do
       content_type 'text/plain'
-      error 406, "Not Acceptable #{negotiated_type}\n"
+      error 406, "Not Acceptable\n"
     end
   end
 end
